@@ -1,0 +1,248 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Asegura que el body y el html ocupen todo el alto */
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden; /* Evitar el scroll horizontal */
+}
+
+/* Contenedor principal */
+.menu-publico-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  width: 100%;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 60px;
+  background-color: #d62828;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h2 {
+  font-size: 1.8rem;
+}
+
+.nav-links a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffc107;
+}
+
+.login-button {
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  color: #d62828;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #ffc107;
+  color: white;
+}
+
+/* Imagen principal */
+.hero-image {
+  width: 100%;
+  margin-top: 60px; /* Da espacio para el header fijo */
+  overflow: hidden;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  max-height: 500px;
+}
+
+/* Promociones y menú */
+main {
+  padding-top: 1000px; /* Da espacio para el header fijo */
+  flex-grow: 1; /* Asegura que 'main' ocupe el resto del espacio disponible */
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2.2rem;
+  color: #343a40;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.menu-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.menu-card h3 {
+  margin: 1rem 0 0.5rem;
+  color: #d62828;
+}
+
+.menu-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.menu-card strong {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #28a745;
+}
+
+/* Footer de redes */
+.social-footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.social-footer a {
+  margin: 0 1rem;
+  color: #495057;
+  transition: color 0.3s ease;
+}
+
+.social-footer a:hover {
+  color: #d62828;
+}
+
+/* Mapa */
+.map-container {
+  padding: 2rem;
+  background-color: #e9ecef;
+  text-align: center;
+  width: 100%;
+}
+
+.map-container h2 {
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+.map-container iframe {
+  border-radius: 8px;
+  max-width: 100%;
+  border: none;
+}
+.horario-container {
+  padding: 20px;
+  background-color: #f2ecec;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.horario-lista {
+  list-style-type: none;
+  padding: 0;
+}
+
+.horario-lista li {
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+.promo-card {
+  background-color: #fffbe6;
+  border: 2px dashed #ffa94d;
+  box-shadow: 0 6px 12px rgba(255, 165, 0, 0.3);
+  margin: 1rem;
+}
+
+.promo-card::before {
+  content: "¡Oferta!";
+  display: inline-block;
+  background-color: #fa5252;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.promociones {
+  background-color: #fff4e6;
+  border-top: 4px dashed #ffa94d;
+  border-bottom: 4px dashed #ffa94d;
+  padding: 2rem 1rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.promociones .promo-card {
+  background-color: #fff;
+  border: 2px solid #ffc078;
+  box-shadow: 0 6px 12px rgba(255, 165, 0, 0.2);
+}
+
+
+.promociones .promo-card::before {
+  display: inline-block;
+  content: "¡Oferta!";
+}
