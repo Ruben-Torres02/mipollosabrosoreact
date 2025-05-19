@@ -1,10 +1,12 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Elimina márgenes y centra el contenido al 100% del ancho */
+.App {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
+/* Puedes eliminar estas reglas si no usas el logo de React */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -18,6 +20,7 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Solo útil si usas un logo animado */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -26,17 +29,18 @@
     transform: rotate(360deg);
   }
 }
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
+/* Puedes dejar esto si usas .card genéricamente */
 .card {
   padding: 2em;
 }
 
+/* Solo si tienes algún texto con esta clase */
 .read-the-docs {
   color: #888;
 }

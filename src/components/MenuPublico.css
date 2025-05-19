@@ -6,10 +6,10 @@
 }
 
 html, body {
-  height: 100%; /* Asegura que el body y el html ocupen todo el alto */
+  height: 100%;
   width: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow-x: hidden; /* Evitar el scroll horizontal */
+  overflow-x: hidden;
 }
 
 /* Contenedor principal */
@@ -73,7 +73,7 @@ html, body {
 /* Imagen principal */
 .hero-image {
   width: 100%;
-  margin-top: 60px; /* Da espacio para el header fijo */
+  margin-top: 60px;
   overflow: hidden;
 }
 
@@ -87,8 +87,8 @@ html, body {
 
 /* Promociones y menú */
 main {
-  padding-top: 1000px; /* Da espacio para el header fijo */
-  flex-grow: 1; /* Asegura que 'main' ocupe el resto del espacio disponible */
+  padding-top: 1000px;
+  flex-grow: 1;
   width: 100%;
 }
 
@@ -113,7 +113,8 @@ h1 {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 250px;
+  width: 100%;
+  max-width: 400px;
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -182,12 +183,14 @@ h1 {
   max-width: 100%;
   border: none;
 }
+
+/* Horario - AJUSTADO PARA PANTALLA COMPLETA */
 .horario-container {
   padding: 20px;
   background-color: #f2ecec;
-  margin: 20px auto;
+  margin: 20px 0;
   border-radius: 10px;
-  max-width: 600px;
+  width: 100%;
   text-align: center;
 }
 
@@ -201,11 +204,15 @@ h1 {
   font-size: 16px;
 }
 
+/* Promociones */
 .promo-card {
   background-color: #fffbe6;
   border: 2px dashed #ffa94d;
   box-shadow: 0 6px 12px rgba(255, 165, 0, 0.3);
   margin: 1rem;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
 }
 
 .promo-card::before {
@@ -227,7 +234,7 @@ h1 {
   border-top: 4px dashed #ffa94d;
   border-bottom: 4px dashed #ffa94d;
   padding: 2rem 1rem;
-  margin: 2rem auto;
+  margin: 2rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -241,8 +248,12 @@ h1 {
   box-shadow: 0 6px 12px rgba(255, 165, 0, 0.2);
 }
 
-
-.promociones .promo-card::before {
-  display: inline-block;
-  content: "¡Oferta!";
+/* EXTRA: Asegura que ningún contenedor limite el ancho */
+.container,
+.section,
+.wrapper {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
