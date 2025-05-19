@@ -15,7 +15,7 @@ export function MenuPublico() {
     }, []);
 
     const handleLoginClick = () => {
-        navigate("/formulario");
+        navigate("formulario");
     };
 
     const platosPromocion = platos.filter(plato => plato.promociones);
@@ -23,29 +23,14 @@ export function MenuPublico() {
 
     return (
         <div className="menu-publico-container">
-            {/* HEADER */}
-            <header className="header">
-                <div className="barras">
-                    <h2>Mi Pollo Sabroso</h2>
-                    <nav className="nav-links">
-                        <a href="#ubicacion">Ubicación</a>
-                        <a href="#idpromo">Promociones</a>
-                    </nav>
-                </div>
-                <button onClick={handleLoginClick} className="login-button">
-                    Login
-                </button>
-            </header>
-
-            {/* MAIN */}
-            <main>
-                {/* Imagen principal */}
+            <main className="limited-container">
                 <div className="hero-image">
                     <img src="images/brasas.jpeg" alt="pollo" className="responsive-image" />
                 </div>
 
-                {/* Sección menú normal */}
-                <h1 id="menuid">Menú</h1>
+                <div className="promo-banner">
+                    <h1 className="menuid">Menú</h1>
+                </div>                
                 <div className="menu">
                     {platosNormales.map(plato => (
                         <div key={plato.id} className="menu-card">
@@ -57,7 +42,6 @@ export function MenuPublico() {
                     ))}
                 </div>
 
-                {/* Sección promociones */}
                 <h2 id="idpromo">Promociones</h2>
                 <div className="promociones">
                     {platosPromocion.map(plato => (

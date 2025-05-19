@@ -1,29 +1,49 @@
+
 .formulario-plato-contenedor {
-  padding: 20px;
-  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  background: white;
+  padding: 40px 20px;
+}
+
+.formulario-plato-centro {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
 
 .formulario-plato-titulo {
-  margin-bottom: 15px;
+  margin-top: 0;
   color: #333;
+  text-align: center;
 }
 
 .formulario-plato-form {
+  width: 100%;
+  max-width: 350px; /* controla el tamaño visual */
+  padding: 24px;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin-bottom: 30px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+  gap: 12px;
+}
+
+.formulario-plato-form:hover{
+  transform: scale(1.05);
 }
 
 .formulario-plato-input,
 .formulario-plato-file {
-  padding: 8px;
-  font-size: 16px;
+  padding: 5px;
+  font-size: 11px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
@@ -31,16 +51,16 @@
 .formulario-plato-checkbox {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 14px;
+  gap: 5px;
+  font-size: 12px;
 }
 
 .formulario-plato-boton {
   background-color: #f3091c;
   color: white;
   border: none;
-  border-radius: 4px;
-  padding: 10px;
+  border-radius: 6px;
+  padding: 8px;
   cursor: pointer;
   font-weight: bold;
 }
@@ -52,15 +72,34 @@
 .formulario-plato-tabla {
   width: 100%;
   border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: white;
 }
 
-.formulario-plato-tabla th,
+.formulario-plato-tabla th {
+  background-color: #f3091c;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.formulario-plato-tabla tr:nth-child(even) {
+  background-color: #fdf3f3;
+}
+
+.formulario-plato-tabla tr:hover {
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  transition: background-color 0.2s ease-in-out;
+}
+
 .formulario-plato-tabla td {
   padding: 10px;
-  border: 1px solid #ccc;
-  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
 }
-
 .formulario-plato-tabla thead {
   background-color: #f3091c;
   color: white;
@@ -71,7 +110,7 @@
 }
 
 .idEditar {
-  background-color: #f9c74f; /* Amarillo */
+  background-color: #cd9104; /* Amarillo */
   color: white;
   border: none;
   padding: 6px 10px;
@@ -87,4 +126,20 @@
   padding: 6px 10px;
   cursor: pointer;
   border-radius: 4px;
+}
+
+.idEditar:hover {
+  background-color: #f98404;
+  transform: scale(1.05);
+}
+
+.idEliminar:hover {
+  background-color: #d90429;
+  transform: scale(1.05);
+}
+
+.formulario-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
