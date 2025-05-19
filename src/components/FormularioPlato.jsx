@@ -133,6 +133,7 @@ export function FormularioPlato() {
 
   return (
     <div className="formulario-plato-contenedor">
+      <div className="formulario-plato-centro">
       <h2 className="formulario-plato-titulo">
         {modoEdicion ? "Editar plato" : "Agregar nuevo plato"}
       </h2>
@@ -248,6 +249,7 @@ export function FormularioPlato() {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }

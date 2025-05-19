@@ -1,3 +1,27 @@
+.contenedor-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0eafc, #f3eacf);
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.formulario-contenedor {
+  background-color: #f3f0f0;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease;
+}
+
+.formulario-contenedor:hover {
+  transform: translateY(-5px);
+}
+
 .formulario{
     display: flex;
     justify-content: center;
@@ -9,7 +33,7 @@
 body {
     margin: 0;
     font-family: sans-serif;
-    background:  #d6dbdb;
+    background:  #d2f1f1;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -19,7 +43,7 @@ body {
   .contenedor-principal {
     display: flex;
     gap: 40px;
-    background: white;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);  
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);

@@ -10,6 +10,7 @@ html, body {
   width: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  font-size: 14px;
 }
 
 /* Contenedor principal */
@@ -28,7 +29,7 @@ html, body {
   left: 0;
   z-index: 10;
   width: 100%;
-  height: 60px;
+  height: 50px;
   background-color: #d62828;
   color: white;
   display: flex;
@@ -39,7 +40,7 @@ html, body {
 }
 
 .header h2 {
-  font-size: 1.8rem;
+  font-size: 1rem;
 }
 
 .nav-links a {
@@ -72,31 +73,48 @@ html, body {
 
 /* Imagen principal */
 .hero-image {
-  width: 100%;
-  margin-top: 60px;
-  overflow: hidden;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);  
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .responsive-image {
   width: 100%;
+  max-width: 900px;
   height: auto;
   object-fit: cover;
-  display: block;
-  max-height: 500px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+.responsive-image:hover {
+  transform: scale(1.03); /* zoom ligero */
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35); /* sombra más intensa */
 }
 
-/* Promociones y menú */
 main {
-  padding-top: 1000px;
+  padding-top: 15px;
   flex-grow: 1;
   width: 100%;
 }
 
 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   margin: 2rem 0 1rem;
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #343a40;
+  position: relative;
+}
+
+h1::before, h1::after {
+  content: "";
+  flex: 1;
+  border-bottom: 10px solid #d62828; /* grosor y color de la línea */
+  margin: 0 1rem; /* espacio entre línea y texto */
 }
 
 .menu {
@@ -108,24 +126,14 @@ h1 {
   width: 100%;
 }
 
-.menu-card {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
 
 .menu-card:hover {
   transform: translateY(-5px);
 }
 
 .menu-card img {
-  width: 100%;
-  height: 160px;
+  width: 70%;
+  height: 100px;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -143,7 +151,7 @@ h1 {
 .menu-card strong {
   display: block;
   margin-top: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #28a745;
 }
 
@@ -165,26 +173,27 @@ h1 {
   color: #d62828;
 }
 
-/* Mapa */
 .map-container {
-  padding: 2rem;
+  padding: 0.5rem;
   background-color: #e9ecef;
   text-align: center;
   width: 100%;
 }
 
 .map-container h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   color: #343a40;
 }
 
 .map-container iframe {
-  border-radius: 8px;
-  max-width: 100%;
-  border: none;
+  border-radius: 16px;
+  max-width: 80%;
+  border: 2px solid hsl(14, 80%, 50%); 
 }
-
-/* Horario - AJUSTADO PARA PANTALLA COMPLETA */
+.map-container iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); /* más fuerte al pasar el mouse */
+}
 .horario-container {
   padding: 20px;
   background-color: #f2ecec;
@@ -201,7 +210,7 @@ h1 {
 
 .horario-lista li {
   padding: 5px 0;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 /* Promociones */
@@ -257,3 +266,27 @@ h1 {
   margin: 0;
   padding: 0;
 }
+
+#idpromo {
+  font-family: 'Roboto', sans-serif; 
+  font-size: 1.5rem;
+  color: #d62828; 
+  text-align: center;
+}
+
+.menu-card.promo-card {
+  transform: scale(0.9); /* Ajusta el valor según lo que necesites */
+  max-width: 310px;
+}
+.menu-card {
+  background-color: white;
+  transform: scale(0.9);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 310px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
