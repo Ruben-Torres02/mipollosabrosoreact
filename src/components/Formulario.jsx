@@ -14,7 +14,7 @@ export function Formulario() {
     e.preventDefault();
 
     try {
-      const response = await fetch("ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/users/login", {
+      const response = await fetch("http://ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,7 +43,7 @@ export function Formulario() {
     e.preventDefault();
 
     try {
-      const response = await fetch("ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/users/register", {
+      const response = await fetch("http://ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/users/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
