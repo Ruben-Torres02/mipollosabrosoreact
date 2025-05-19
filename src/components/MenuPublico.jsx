@@ -23,7 +23,7 @@ export function MenuPublico() {
 
     return (
         <div className="menu-publico-container">
-            {/* Header debe ir fuera del main */}
+            {/* HEADER */}
             <header className="header">
                 <div className="barras">
                     <h2>Mi Pollo Sabroso</h2>
@@ -37,11 +37,14 @@ export function MenuPublico() {
                 </button>
             </header>
 
+            {/* MAIN */}
             <main>
+                {/* Imagen principal */}
                 <div className="hero-image">
                     <img src="images/brasas.jpeg" alt="pollo" className="responsive-image" />
                 </div>
 
+                {/* Sección menú normal */}
                 <h1 id="menuid">Menú</h1>
                 <div className="menu">
                     {platosNormales.map(plato => (
@@ -54,11 +57,12 @@ export function MenuPublico() {
                     ))}
                 </div>
 
+                {/* Sección promociones */}
                 <h2 id="idpromo">Promociones</h2>
                 <div className="promociones">
                     {platosPromocion.map(plato => (
-                       <div key={plato.id} className="menu-card promo-card">
-                            <img src={`http://localhost:8080/api/platos/${plato.id}/imagen`} alt={plato.name} className="menu-card-image" />
+                        <div key={plato.id} className="menu-card promo-card">
+                            <img src={`http://localhost:8080/api/platos/${plato.id}/imagen`} alt={plato.name} />
                             <h3>{plato.name}</h3>
                             <p>{plato.description}</p>
                             <strong>${plato.price}</strong>
@@ -66,6 +70,7 @@ export function MenuPublico() {
                     ))}
                 </div>
 
+                {/* Footer redes */}
                 <footer className="social-footer">
                     <a
                         href="https://www.facebook.com/groups/183551466942403/"
@@ -85,6 +90,7 @@ export function MenuPublico() {
                     </a>
                 </footer>
 
+                {/* Mapa */}
                 <div id="ubicacion" className="map-container">
                     <h2>¿Dónde estamos?</h2>
                     <iframe
@@ -99,6 +105,7 @@ export function MenuPublico() {
                     ></iframe>
                 </div>
 
+                {/* Horario */}
                 <div className="horario-container">
                     <h2>Horario de Atención</h2>
                     <ul className="horario-lista">
