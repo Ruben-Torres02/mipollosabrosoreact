@@ -9,7 +9,7 @@ export function MenuPublico() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("http://ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/platos")
+        fetch("https://mipollosabroso2.onrender.com/api/platos")
             .then(res => res.json())
             .then(data => setPlatos(data));
     }, []);
@@ -34,7 +34,7 @@ export function MenuPublico() {
                 <div className="menu">
                     {platosNormales.map(plato => (
                         <div key={plato.id} className="menu-card">
-                            <img src={`http://ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/platos/${plato.id}/imagen`} alt={plato.name} />
+                            <img src={`https://mipollosabroso2.onrender.com/api/platos/${plato.id}/imagen`} alt={plato.name} />
                             <h3>{plato.name}</h3>
                             <p>{plato.description}</p>
                             <strong>${plato.price}</strong>
@@ -46,7 +46,7 @@ export function MenuPublico() {
                 <div className="promociones">
                     {platosPromocion.map(plato => (
                         <div key={plato.id} className="menu-card promo-card">
-                            <img src={`http://ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/platos/${plato.id}/imagen`} alt={plato.name} />
+                            <img src={`https://mipollosabroso2.onrender.com/api/platos/${plato.id}/imagen`} alt={plato.name} />
                             <h3>{plato.name}</h3>
                             <p>{plato.description}</p>
                             <strong>${plato.price}</strong>
