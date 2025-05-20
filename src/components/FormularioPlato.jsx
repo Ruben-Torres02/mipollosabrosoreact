@@ -75,7 +75,7 @@ export function FormularioPlato() {
 
       if (modoEdicion) {
         // Actualizar
-        res = await fetch(`ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/platos/${platoEditandoId}`, {
+        res = await fetch(`http://ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/platos/${platoEditandoId}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(plato),
@@ -87,7 +87,7 @@ export function FormularioPlato() {
         alert("Plato actualizado correctamente");
       } else {
         // Crear
-        res = await fetch("ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/platos", {
+        res = await fetch("http://ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/platos", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(plato),
@@ -105,7 +105,7 @@ export function FormularioPlato() {
         const formData = new FormData();
         formData.append("archivo", imagen);
 
-        const resImg = await fetch(`ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/platos/${platoId}/imagen`, {
+        const resImg = await fetch(`http://ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/platos/${platoId}/imagen`, {
           method: "POST",
           body: formData,
         });
@@ -224,7 +224,7 @@ export function FormularioPlato() {
               <td>${plato.price}</td>
               <td>
                 <img
-                  src={`ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/platos/${plato.id}/imagen`}
+                  src={`http://ec2-3-145-48-161.us-east-2.compute.amazonaws.com:8080/api/platos/${plato.id}/imagen`}
                   alt={plato.name}
                   style={{
                     width: "60px",
